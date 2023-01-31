@@ -8,6 +8,7 @@ from tensorflow.keras.layers import Dense, Activation
 from tensorflow.keras.optimizers import SGD
 import matplotlib.pyplot as plt
 from keras.layers import Conv2D, MaxPool2D, Flatten
+from keras.layers import Dropout
 
 FTRAIN = 'train.csv'
 FTEST = 'test.csv'
@@ -68,18 +69,22 @@ model = Sequential()
 model.add(Conv2D(32, 3, input_shape=(96, 96, 1)))
 model.add(Activation('relu'))
 model.add(MaxPool2D(pool_size=(2, 2)))
+model.add(Dropout(0.1))
 
 model.add(Conv2D(64, 2))
 model.add(Activation('relu'))
 model.add(MaxPool2D(pool_size=(2, 2)))
+model.add(Dropout(0.2))
 
 model.add(Conv2D(128, 2))
 model.add(Activation('relu'))
 model.add(MaxPool2D(pool_size=(2, 2)))
+model.add(Dropout(0.3))
 
 model.add(Flatten())
 model.add(Dense(500))
 model.add(Activation('relu'))
+model.add(Dropout(0.5))
 model.add(Dense(500))
 model.add(Activation('relu'))
 model.add(Dense(36))
