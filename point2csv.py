@@ -81,3 +81,69 @@ for k in range(17):
 
         with open("train.csv", "a") as f:
             f.write("a\n")
+for i in range(7616):
+    print((i/7616)*100,i)
+    cnt = 0
+    with open("CSVALL/"+str(i).rjust(4, '0')+".csv") as d:
+        reader =csv.reader(d)
+        l = [row for row in reader]
+        for j in range(18):
+            try:
+                if(int(l[cnt][0])==j):
+                    #print(int(l[cnt][0]))
+                    with open("train.csv", "a") as f:
+                        f.write(str((int(l[cnt][1]))/(1440/96))+","+str((int(l[cnt][2]))/(1080/96))+",")
+                    cnt += 1
+                else:
+                    with open("train.csv", "a") as f:
+                        f.write(","+",")
+            except:
+                if(j==17):
+                    with open("train.csv", "a") as f:
+                            f.write(","+",")
+                print("kesson")
+
+    #with open("train.csv", "a") as f:
+        #f.write(" ".join(map(str, data)))
+        
+
+    with open("train.csv", "a") as f:
+        f.write("a\n")
+
+for k in range(17):
+    for i in range(7616):
+        print((i/7616)*100,k)
+        cnt = 0
+        with open("CSVALL/"+str(i).rjust(4, '0')+".csv") as d:
+            reader =csv.reader(d)
+            l = [row for row in reader]
+            for j in range(18):
+                try:
+                    if(int(l[cnt][0])==j):
+                        #print(int(l[cnt][0]))
+                        with open("train.csv", "a") as f:
+                            xtemp=int(l[cnt][1])
+                            ytemp=int(l[cnt][2])
+                            xxtemp=int(xtemp/(1440/96))
+                            yytemp=int(ytemp/(1080/96))
+                            point=np.array([xxtemp,yytemp])
+                            v = point - center
+                            u = rotCoordinate(v, 20*(k+1))
+                            uc = u + center
+                            f.write(str(uc[0])+","+str(uc[1])+",")
+                        cnt += 1
+                    else:
+                        with open("train.csv", "a") as f:
+                            f.write(","+",")
+                except:
+                    if(j==17):
+                        with open("train.csv", "a") as f:
+                                f.write(","+",")
+                    print("kesson")
+
+        #with open("train.csv", "a") as f:
+            #f.write(" ".join(map(str, data)))
+            
+
+        with open("train.csv", "a") as f:
+            f.write("a\n")
