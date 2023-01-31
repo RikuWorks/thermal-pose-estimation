@@ -12,7 +12,7 @@ for i in range(7616):
     img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8,8))
     img = clahe.apply(img)
-    img=cv2.Canny(img,100,200)
+    img=cv2.Canny(img,0,100)
     img = cv2.resize(img, dsize=(96, 96))
 
     data = img.reshape(-1)
@@ -32,7 +32,7 @@ for k in range(17):
         img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8,8))
         img = clahe.apply(img)
-        img=cv2.Canny(img,100,200)
+        img=cv2.Canny(img,0,100)
         height= img.shape[0]
         width= img.shape[1]
         center=(int(width/2),int(height/2))
