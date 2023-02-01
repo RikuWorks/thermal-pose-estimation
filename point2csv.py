@@ -152,7 +152,7 @@ for i in range(2):
 
 #left up
 #30x30
-for i in range(2):
+for i in range(1):
     for i in range(7616):
         imgsize=30
         print((i/7616)*100,i)
@@ -185,7 +185,7 @@ for i in range(2):
 
 
 #50x50
-for i in range(2):
+for i in range(1):
     for i in range(7616):
         imgsize=50
         print((i/7616)*100,i)
@@ -220,7 +220,7 @@ for i in range(2):
 
 
 #70x70
-for i in range(2):
+for i in range(1):
     for i in range(7616):
         imgsize=70
         print((i/7616)*100,i)
@@ -254,7 +254,7 @@ for i in range(2):
 
 #left down
 #30x30
-for i in range(2):
+for i in range(1):
     for i in range(7616):
         imgsize=30
         print((i/7616)*100,i)
@@ -287,7 +287,7 @@ for i in range(2):
 
 
 #50x50
-for i in range(2):
+for i in range(1):
     for i in range(7616):
         imgsize=50
         print((i/7616)*100,i)
@@ -322,7 +322,7 @@ for i in range(2):
 
 
 #70x70
-for i in range(2):
+for i in range(1):
     for i in range(7616):
         imgsize=70
         print((i/7616)*100,i)
@@ -356,7 +356,7 @@ for i in range(2):
 
 #right up
 #30x30
-for i in range(2):
+for i in range(1):
     for i in range(7616):
         imgsize=30
         print((i/7616)*100,i)
@@ -389,7 +389,7 @@ for i in range(2):
 
 
 #50x50
-for i in range(2):
+for i in range(1):
     for i in range(7616):
         imgsize=50
         print((i/7616)*100,i)
@@ -424,7 +424,7 @@ for i in range(2):
 
 
 #70x70
-for i in range(2):
+for i in range(1):
     for i in range(7616):
         imgsize=70
         print((i/7616)*100,i)
@@ -459,7 +459,7 @@ for i in range(2):
 
 #right down
 #30x30
-for i in range(2):
+for i in range(1):
     for i in range(7616):
         imgsize=30
         print((i/7616)*100,i)
@@ -492,7 +492,7 @@ for i in range(2):
 
 
 #50x50
-for i in range(2):
+for i in range(1):
     for i in range(7616):
         imgsize=50
         print((i/7616)*100,i)
@@ -527,7 +527,7 @@ for i in range(2):
 
 
 #70x70
-for i in range(2):
+for i in range(1):
     for i in range(7616):
         imgsize=70
         print((i/7616)*100,i)
