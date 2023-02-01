@@ -93,30 +93,4 @@ sgd = SGD(lr=0.01, momentum=0.9, nesterov=True)
 model.compile(loss='mean_squared_error', optimizer=sgd)
 hist = model.fit(X, y, epochs=100, validation_split=0.2)
 
-plt.plot(hist.history['loss'], linewidth=3, label='train')
-plt.plot(hist.history['val_loss'], linewidth=3, label='valid')
-plt.grid()
-plt.legend()
-plt.xlabel('epoch')
-plt.ylabel('loss')
-plt.ylim(1e-3, 1e-2)
-plt.yscale('log')
-plt.show()
-
-model.save('model.h5')
-
-X_test, _ = testdataloader2D()
-y_test = model.predict(X_test)
-
-fig = plt.figure(figsize=(6, 6))
-fig.subplots_adjust(
-    left=0, right=1, bottom=0, top=1, hspace=0.05, wspace=0.05)
-
-for i in range(16):
-    a = random.randint(0, 7000)
-    axis = fig.add_subplot(4, 4, i+1, xticks=[], yticks=[])
-    plot_sample(X_test[a], y_test[a], axis)
-
-plt.show()
-
 model.save('model.h5')
