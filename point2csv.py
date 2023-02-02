@@ -142,3 +142,418 @@ for i in range(2):
 
         with open("train.csv", "a") as f:
             f.write("a\n")
+
+
+
+
+
+
+
+
+#left up
+#30x30
+for i in range(2):
+    for i in range(7616):
+        imgsize=30
+        print((i/7616)*100,i)
+        cnt = 0
+        with open("CSVALL/"+str(i).rjust(4, '0')+".csv") as d:
+            reader =csv.reader(d)
+            l = [row for row in reader]
+            for j in range(18):
+                try:
+                    if(int(l[cnt][0])==j):
+                        #print(int(l[cnt][0]))
+                        with open("train.csv", "a") as f:
+                            f.write(str(((int(l[cnt][1]))/(1440/imgsize)))+","+str(((int(l[cnt][2]))/(1080/imgsize)))+",")
+                        cnt += 1
+                    else:
+                        with open("train.csv", "a") as f:
+                            f.write(","+",")
+                except:
+                    if(j==17):
+                        with open("train.csv", "a") as f:
+                                f.write(","+",")
+                    print("kesson")
+
+        #with open("train.csv", "a") as f:
+            #f.write(" ".join(map(str, data)))
+            
+
+        with open("train.csv", "a") as f:
+            f.write("a\n")
+
+
+#50x50
+for i in range(2):
+    for i in range(7616):
+        imgsize=50
+        print((i/7616)*100,i)
+        cnt = 0
+        with open("CSVALL/"+str(i).rjust(4, '0')+".csv") as d:
+            reader =csv.reader(d)
+            l = [row for row in reader]
+            for j in range(18):
+                try:
+                    if(int(l[cnt][0])==j):
+                        #print(int(l[cnt][0]))
+                        with open("train.csv", "a") as f:
+                            f.write(str(((int(l[cnt][1]))/(1440/imgsize)))+","+str(((int(l[cnt][2]))/(1080/imgsize)))+",")
+                        cnt += 1
+                    else:
+                        with open("train.csv", "a") as f:
+                            f.write(","+",")
+                except:
+                    if(j==17):
+                        with open("train.csv", "a") as f:
+                                f.write(","+",")
+                    print("kesson")
+
+        #with open("train.csv", "a") as f:
+            #f.write(" ".join(map(str, data)))
+            
+
+        with open("train.csv", "a") as f:
+            f.write("a\n")
+
+
+
+
+#70x70
+for i in range(2):
+    for i in range(7616):
+        imgsize=70
+        print((i/7616)*100,i)
+        cnt = 0
+        with open("CSVALL/"+str(i).rjust(4, '0')+".csv") as d:
+            reader =csv.reader(d)
+            l = [row for row in reader]
+            for j in range(18):
+                try:
+                    if(int(l[cnt][0])==j):
+                        #print(int(l[cnt][0]))
+                        with open("train.csv", "a") as f:
+                            f.write(str(((int(l[cnt][1]))/(1440/imgsize)))+","+str(((int(l[cnt][2]))/(1080/imgsize)))+",")
+                        cnt += 1
+                    else:
+                        with open("train.csv", "a") as f:
+                            f.write(","+",")
+                except:
+                    if(j==17):
+                        with open("train.csv", "a") as f:
+                                f.write(","+",")
+                    print("kesson")
+
+        #with open("train.csv", "a") as f:
+            #f.write(" ".join(map(str, data)))
+            
+
+        with open("train.csv", "a") as f:
+            f.write("a\n")
+
+
+#left down
+#30x30
+for i in range(2):
+    for i in range(7616):
+        imgsize=30
+        print((i/7616)*100,i)
+        cnt = 0
+        with open("CSVALL/"+str(i).rjust(4, '0')+".csv") as d:
+            reader =csv.reader(d)
+            l = [row for row in reader]
+            for j in range(18):
+                try:
+                    if(int(l[cnt][0])==j):
+                        #print(int(l[cnt][0]))
+                        with open("train.csv", "a") as f:
+                            f.write(str(((int(l[cnt][1]))/(1440/imgsize)))+","+str(66+((int(l[cnt][2]))/(1080/imgsize)))+",")
+                        cnt += 1
+                    else:
+                        with open("train.csv", "a") as f:
+                            f.write(","+",")
+                except:
+                    if(j==17):
+                        with open("train.csv", "a") as f:
+                                f.write(","+",")
+                    print("kesson")
+
+        #with open("train.csv", "a") as f:
+            #f.write(" ".join(map(str, data)))
+            
+
+        with open("train.csv", "a") as f:
+            f.write("a\n")
+
+
+#50x50
+for i in range(2):
+    for i in range(7616):
+        imgsize=50
+        print((i/7616)*100,i)
+        cnt = 0
+        with open("CSVALL/"+str(i).rjust(4, '0')+".csv") as d:
+            reader =csv.reader(d)
+            l = [row for row in reader]
+            for j in range(18):
+                try:
+                    if(int(l[cnt][0])==j):
+                        #print(int(l[cnt][0]))
+                        with open("train.csv", "a") as f:
+                            f.write(str(((int(l[cnt][1]))/(1440/imgsize)))+","+str(46+((int(l[cnt][2]))/(1080/imgsize)))+",")
+                        cnt += 1
+                    else:
+                        with open("train.csv", "a") as f:
+                            f.write(","+",")
+                except:
+                    if(j==17):
+                        with open("train.csv", "a") as f:
+                                f.write(","+",")
+                    print("kesson")
+
+        #with open("train.csv", "a") as f:
+            #f.write(" ".join(map(str, data)))
+            
+
+        with open("train.csv", "a") as f:
+            f.write("a\n")
+
+
+
+
+#70x70
+for i in range(2):
+    for i in range(7616):
+        imgsize=70
+        print((i/7616)*100,i)
+        cnt = 0
+        with open("CSVALL/"+str(i).rjust(4, '0')+".csv") as d:
+            reader =csv.reader(d)
+            l = [row for row in reader]
+            for j in range(18):
+                try:
+                    if(int(l[cnt][0])==j):
+                        #print(int(l[cnt][0]))
+                        with open("train.csv", "a") as f:
+                            f.write(str(((int(l[cnt][1]))/(1440/imgsize)))+","+str(26+((int(l[cnt][2]))/(1080/imgsize)))+",")
+                        cnt += 1
+                    else:
+                        with open("train.csv", "a") as f:
+                            f.write(","+",")
+                except:
+                    if(j==17):
+                        with open("train.csv", "a") as f:
+                                f.write(","+",")
+                    print("kesson")
+
+        #with open("train.csv", "a") as f:
+            #f.write(" ".join(map(str, data)))
+            
+
+        with open("train.csv", "a") as f:
+            f.write("a\n")
+
+
+#right up
+#30x30
+for i in range(2):
+    for i in range(7616):
+        imgsize=30
+        print((i/7616)*100,i)
+        cnt = 0
+        with open("CSVALL/"+str(i).rjust(4, '0')+".csv") as d:
+            reader =csv.reader(d)
+            l = [row for row in reader]
+            for j in range(18):
+                try:
+                    if(int(l[cnt][0])==j):
+                        #print(int(l[cnt][0]))
+                        with open("train.csv", "a") as f:
+                            f.write(str(66+((int(l[cnt][1]))/(1440/imgsize)))+","+str(((int(l[cnt][2]))/(1080/imgsize)))+",")
+                        cnt += 1
+                    else:
+                        with open("train.csv", "a") as f:
+                            f.write(","+",")
+                except:
+                    if(j==17):
+                        with open("train.csv", "a") as f:
+                                f.write(","+",")
+                    print("kesson")
+
+        #with open("train.csv", "a") as f:
+            #f.write(" ".join(map(str, data)))
+            
+
+        with open("train.csv", "a") as f:
+            f.write("a\n")
+
+
+#50x50
+for i in range(2):
+    for i in range(7616):
+        imgsize=50
+        print((i/7616)*100,i)
+        cnt = 0
+        with open("CSVALL/"+str(i).rjust(4, '0')+".csv") as d:
+            reader =csv.reader(d)
+            l = [row for row in reader]
+            for j in range(18):
+                try:
+                    if(int(l[cnt][0])==j):
+                        #print(int(l[cnt][0]))
+                        with open("train.csv", "a") as f:
+                            f.write(str(46+((int(l[cnt][1]))/(1440/imgsize)))+","+str(((int(l[cnt][2]))/(1080/imgsize)))+",")
+                        cnt += 1
+                    else:
+                        with open("train.csv", "a") as f:
+                            f.write(","+",")
+                except:
+                    if(j==17):
+                        with open("train.csv", "a") as f:
+                                f.write(","+",")
+                    print("kesson")
+
+        #with open("train.csv", "a") as f:
+            #f.write(" ".join(map(str, data)))
+            
+
+        with open("train.csv", "a") as f:
+            f.write("a\n")
+
+
+
+
+#70x70
+for i in range(2):
+    for i in range(7616):
+        imgsize=70
+        print((i/7616)*100,i)
+        cnt = 0
+        with open("CSVALL/"+str(i).rjust(4, '0')+".csv") as d:
+            reader =csv.reader(d)
+            l = [row for row in reader]
+            for j in range(18):
+                try:
+                    if(int(l[cnt][0])==j):
+                        #print(int(l[cnt][0]))
+                        with open("train.csv", "a") as f:
+                            f.write(str(26+((int(l[cnt][1]))/(1440/imgsize)))+","+str(((int(l[cnt][2]))/(1080/imgsize)))+",")
+                        cnt += 1
+                    else:
+                        with open("train.csv", "a") as f:
+                            f.write(","+",")
+                except:
+                    if(j==17):
+                        with open("train.csv", "a") as f:
+                                f.write(","+",")
+                    print("kesson")
+
+        #with open("train.csv", "a") as f:
+            #f.write(" ".join(map(str, data)))
+            
+
+        with open("train.csv", "a") as f:
+            f.write("a\n")
+
+
+
+#right down
+#30x30
+for i in range(2):
+    for i in range(7616):
+        imgsize=30
+        print((i/7616)*100,i)
+        cnt = 0
+        with open("CSVALL/"+str(i).rjust(4, '0')+".csv") as d:
+            reader =csv.reader(d)
+            l = [row for row in reader]
+            for j in range(18):
+                try:
+                    if(int(l[cnt][0])==j):
+                        #print(int(l[cnt][0]))
+                        with open("train.csv", "a") as f:
+                            f.write(str(66+((int(l[cnt][1]))/(1440/imgsize)))+","+str(66+((int(l[cnt][2]))/(1080/imgsize)))+",")
+                        cnt += 1
+                    else:
+                        with open("train.csv", "a") as f:
+                            f.write(","+",")
+                except:
+                    if(j==17):
+                        with open("train.csv", "a") as f:
+                                f.write(","+",")
+                    print("kesson")
+
+        #with open("train.csv", "a") as f:
+            #f.write(" ".join(map(str, data)))
+            
+
+        with open("train.csv", "a") as f:
+            f.write("a\n")
+
+
+#50x50
+for i in range(2):
+    for i in range(7616):
+        imgsize=50
+        print((i/7616)*100,i)
+        cnt = 0
+        with open("CSVALL/"+str(i).rjust(4, '0')+".csv") as d:
+            reader =csv.reader(d)
+            l = [row for row in reader]
+            for j in range(18):
+                try:
+                    if(int(l[cnt][0])==j):
+                        #print(int(l[cnt][0]))
+                        with open("train.csv", "a") as f:
+                            f.write(str(46+((int(l[cnt][1]))/(1440/imgsize)))+","+str(46+((int(l[cnt][2]))/(1080/imgsize)))+",")
+                        cnt += 1
+                    else:
+                        with open("train.csv", "a") as f:
+                            f.write(","+",")
+                except:
+                    if(j==17):
+                        with open("train.csv", "a") as f:
+                                f.write(","+",")
+                    print("kesson")
+
+        #with open("train.csv", "a") as f:
+            #f.write(" ".join(map(str, data)))
+            
+
+        with open("train.csv", "a") as f:
+            f.write("a\n")
+
+
+
+
+#70x70
+for i in range(2):
+    for i in range(7616):
+        imgsize=70
+        print((i/7616)*100,i)
+        cnt = 0
+        with open("CSVALL/"+str(i).rjust(4, '0')+".csv") as d:
+            reader =csv.reader(d)
+            l = [row for row in reader]
+            for j in range(18):
+                try:
+                    if(int(l[cnt][0])==j):
+                        #print(int(l[cnt][0]))
+                        with open("train.csv", "a") as f:
+                            f.write(str(26+((int(l[cnt][1]))/(1440/imgsize)))+","+str(26+((int(l[cnt][2]))/(1080/imgsize)))+",")
+                        cnt += 1
+                    else:
+                        with open("train.csv", "a") as f:
+                            f.write(","+",")
+                except:
+                    if(j==17):
+                        with open("train.csv", "a") as f:
+                                f.write(","+",")
+                    print("kesson")
+
+        #with open("train.csv", "a") as f:
+            #f.write(" ".join(map(str, data)))
+            
+
+        with open("train.csv", "a") as f:
+            f.write("a\n")

@@ -9,9 +9,10 @@ from tensorflow.keras.optimizers import SGD
 import matplotlib.pyplot as plt
 from keras.layers import Conv2D, MaxPool2D, Flatten
 from keras.layers import Dropout
+from keras.callbacks import ModelCheckpoint
+
 
 FTRAIN = 'train.csv'
-FTEST = 'test.csv'
 FIMAGE = 'image.csv'
 
 def traindataloader():
@@ -30,18 +31,6 @@ def traindataloader():
     y = y.astype(np.float32)
     return X, y
 
-def testdataloader():
-
-    df = read_csv(os.path.expanduser(FTEST))
-    df['Image'] = df['Image'].apply(lambda im: np.fromstring(im, sep=' '))
-    print(df.count())
-    df = df.dropna()
-    X = np.vstack(df['Image'].values) / 255.
-    X = X.astype(np.float32)
-    y = None
-
-    return X, y
-
 def plot_sample(x, y, axis):
     img = x.reshape(96, 96) 
     axis.imshow(img, cmap='gray') 
@@ -49,11 +38,6 @@ def plot_sample(x, y, axis):
 
 def traindataloader2D():
     X, y = traindataloader()
-    X = X.reshape(-1,96, 96,1)
-    return X, y
-
-def testdataloader2D():
-    X, y = testdataloader()
     X = X.reshape(-1,96, 96,1)
     return X, y
 
@@ -89,8 +73,20 @@ model.add(Dense(500))
 model.add(Activation('relu'))
 model.add(Dense(36))
 
+os.makedirs('models', exist_ok=True)
+
+model_checkpoint = ModelCheckpoint(
+
+    filepath=os.path.join('models', 'model_{epoch:02d}_{val_loss:.2f}.h5'),
+
+    monitor='val_loss',
+
+    verbose=1,
+    period=50)
+
+
 sgd = SGD(lr=0.01, momentum=0.9, nesterov=True)
 model.compile(loss='mean_squared_error', optimizer=sgd)
-hist = model.fit(X, y, epochs=100, validation_split=0.2)
+hist = model.fit(X, y, epochs=10000, validation_split=0.23,callbacks=[model_checkpoint])
 
 model.save('model.h5')
