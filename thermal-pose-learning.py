@@ -76,17 +76,14 @@ model.add(Dense(36))
 os.makedirs('models', exist_ok=True)
 
 model_checkpoint = ModelCheckpoint(
-
     filepath=os.path.join('models', 'model_{epoch:02d}_{val_loss:.2f}.h5'),
-
     monitor='val_loss',
-
     verbose=1,
     period=50)
 
 
 sgd = SGD(lr=0.01, momentum=0.9, nesterov=True)
 model.compile(loss='mean_squared_error', optimizer=sgd)
-hist = model.fit(X, y, epochs=10000, validation_split=0.23,callbacks=[model_checkpoint])
+hist = model.fit(X, y, epochs=10000, validation_split=0.2,callbacks=[model_checkpoint])
 
 model.save('model.h5')
